@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: min(1672px, 100vw) 700px;
-  background-image: url("http://localhost:3000/static/media/Global%20Journey%20in%20Blue.6ad25102b6b64dc78f23.png");
+  background-image: url("../../data/Global Journey in Blue.png");
   background-color: var(--color-bg-primary);
   overflow: hidden;
 }
