@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import Template from "./pages/template/Template";
 import Home from "./pages/home/Home";
+import AdPoster from "./pages/adPoster/AdPoster";
+import Template from "./pages/template/Template";
 import { WebsiteContentProvider } from "./api/WebsiteContentContext";
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/template" element={<Template />} />
+        <Route path="/ad/:code" element={<AdPoster />} />
       </Routes>
     </WebsiteContentProvider>
   );

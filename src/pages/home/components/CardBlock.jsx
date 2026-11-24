@@ -12,8 +12,21 @@ export default function CardBlock() {
 
   useEffect(() => console.log(adCard), [adCard]);
 
-  if (loading) return <p>Loading vacancies...</p>;
-  if (error) return <p>Failed to load vacancies.</p>;
+  if (loading)
+    return (
+      <section className="ad-card-block">
+        <div className="heading">
+          <h3>Featured Overseas Opportunities</h3>
+        </div>
+        <p>Loading vacancies...</p>
+      </section>
+    );
+  if (error)
+    return (
+      <section className="ad-card-block">
+        <p>Failed to load vacancies.</p>
+      </section>
+    );
   return (
     <section className="ad-card-block">
       <div className="heading">
@@ -28,8 +41,11 @@ export default function CardBlock() {
           });
           return (
             <div className="ad-card-outline" key={idx}>
-              <div className="ad-card" onClick={() => handleOpenJobAd(c.code)}>
-                <div className="ad-header">
+              <div className="ad-card">
+                <div
+                  className="ad-header"
+                  onClick={() => handleOpenJobAd(c.code)}
+                >
                   <span className="flag">
                     <img
                       src={`https://flagcdn.com/w80/${c.country_code}.png`}
@@ -39,7 +55,10 @@ export default function CardBlock() {
                   <span className="country-name">{c.country_name}</span>
                 </div>
 
-                <div className="ad-body">
+                <div
+                  className="ad-body"
+                  onClick={() => handleOpenJobAd(c.code)}
+                >
                   <div className="job-title">{c.job_name}</div>
 
                   <hr />
@@ -75,7 +94,17 @@ export default function CardBlock() {
                 </div>
 
                 <div className="btn-container">
-                  <button className="ad-apply-now-btn">Apply Now</button>
+                  <button
+                    className="ad-apply-now-btn"
+                    onClick={() =>
+                      window.open(
+                        `https://wa.me/${c.ad_referral_phone}?text=${encodeURIComponent(`Hey I would like to enquire about ${c.job_name} Job in ${c.country_name}`)}`,
+                        "_blank",
+                      )
+                    }
+                  >
+                    Apply Now
+                  </button>
                 </div>
               </div>
             </div>

@@ -1,0 +1,88 @@
+.ad-poster {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100vw;
+  min-height: 100vh;
+
+  background: var(--color-heading-light);
+}
+
+.ad-poster .poster-outline {
+  width: fit-content;
+  margin-left: 50%;
+  translate: -50% 0;
+  padding: var(--space-sm);
+
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--back-shadow);
+}
+.ad-poster .poster {
+  position: relative;
+}
+.ad-poster .poster-image img {
+  width: auto;
+  height: 80vh;
+}
+.ad-poster .poster .contact-us {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+
+  font-family: var(--font-family-sans);
+  background: var(--color-bg-muted);
+  backdrop-filter: var(--glass-blur-sm);
+}
+.ad-poster .contact-us .ad-info .job-name {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-b);
+}
+.ad-poster .contact-us .ad-info .country {
+  font-size: var(--font-size-rg);
+  color: var(--color-muted);
+}
+
+.ad-poster .poster .whatsapp-button {
+  scale: 0.85;
+  padding: calc(var(--space-sm) - 4px) var(--space-sm);
+  gap: var(--space-sm);
+  display: flex;
+  font-size: var(--font-size-rg);
+  color: var(--color-muted);
+  align-items: center;
+  border: solid 1px var(--color-muted);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+}
+.ad-poster .poster .whatsapp-button img {
+  width: 21px;
+}
+
+.ad-poster footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  width: 100vw;
+
+  border-top: solid 3px var(--color-gold-border);
+  background: var(--color-bg-primary);
+}
+.ad-poster footer .logo img {
+  height: 60px;
+}
+.ad-poster footer .text {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-boldest);
+  text-shadow: var(--text-shadow-dark);
+  color: var(--color-heading-light);
+}
