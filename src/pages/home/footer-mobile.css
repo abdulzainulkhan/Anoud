@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  .home footer {
+    padding: 20px 16px;
+  }
+
+  .home footer .top {
+    align-items: center;
+    gap: 14px;
+  }
+
+  .home footer .top .footer-icon img {
+    height: 62px;
+  }
+
+  .home footer .top .text {
+    font-size: clamp(23px, 7vw, 32px);
+    line-height: 1.1;
+    text-align: right;
+  }
+
+  footer .bottom {
+    padding: 0;
+    margin-top: 22px;
+  }
+
+  footer .bottom .contact .heading {
+    margin-bottom: 10px;
+  }
+
+  footer .bottom .contact li {
+    overflow-wrap: anywhere;
+  }
+}

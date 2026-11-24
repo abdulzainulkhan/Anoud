@@ -1,0 +1,199 @@
+.home .ad-card-block {
+  padding: var(--space-xl);
+}
+.home .ad-card-block .heading {
+  margin-top: var(--space-xl);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-family-sans);
+  -webkit-text-stroke: var(--color-secondary) 0.2px;
+  letter-spacing: 0.4px;
+  color: var(--color-secondary);
+  transform: scaleY(1.1);
+}
+
+.home .ad-card-block .card-container {
+  margin-top: var(--space-compnt-lg);
+  gap: var(--space-xl);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.home .ad-card {
+  width: 265px;
+  height: 370px;
+
+  font-family: var(--font-family-sans);
+  border-radius: var(--radius-md);
+  background: var(--background-glow-white);
+  box-shadow: var(--back-shadow);
+  cursor: pointer;
+}
+
+.home .ad-card-outline {
+  padding: var(--space-sm);
+
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--back-shadow);
+}
+.home .ad-card .flag {
+  height: 26px;
+}
+.home .ad-card .flag img {
+  width: 40px;
+  /* box-shadow: var(--flag-shadow); */
+}
+
+.home .ad-card .ad-header {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--space-sm);
+
+  gap: var(--space-sm);
+  background: var(--background-header);
+  border: solid 1px var(--border-color-white);
+  border-bottom: solid 2px var(--border-color-white);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  font-size: calc(var(--font-size-lg) + 2px);
+  font-weight: var(--font-weight-b);
+  text-transform: uppercase;
+}
+.home .ad-card .ad-header .country-name {
+  line-height: 0.9;
+}
+.ad-card .ad-body {
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm) 0;
+  overflow-y: auto;
+  height: 250px;
+}
+.ad-card .ad-body hr {
+  border: none;
+  height: 2px;
+  background-color: var(--color-gold-border);
+}
+.ad-card .ad-body .job-title {
+  text-transform: uppercase;
+}
+.ad-card .ad-body .job-title,
+.ad-card .ad-body .pay-info {
+  display: flex;
+  align-items: center;
+
+  font-weight: var(--font-weight-b);
+  font-size: var(--font-size-xl);
+}
+.ad-card .ad-body .pay-info .material-symbols-outlined {
+  font-size: 21px;
+}
+.ad-card .ad-body .pay-info .sub {
+  font-weight: var(--font-weight-rg);
+  font-size: var(--font-size-md);
+}
+.ad-card .ad-body .description {
+  flex: 1;
+  overflow-y: auto;
+}
+.ad-card .ad-body .description ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.ad-card .ad-body .description li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-variation-settings: "wght" var(--font-weight-lt);
+}
+
+.home .ad-card .btn-container {
+  text-align: center;
+}
+.home .ad-card button.ad-apply-now-btn {
+  padding: var(--space-sm) var(--space-xl);
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-pill);
+  background: var(--initial-gold-gradient);
+}
+
+.home .ad-card.special-card {
+  background-color: var(--color-bg-primary);
+}
+.home .ad-card.special-card .header {
+  padding: var(--space-md) var(--space-lg);
+
+  font-weight: var(--font-weight-boldest);
+  color: var(--color-heading-light);
+}
+.home .ad-card.special-card .stamp-block-container {
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+
+  color: var(--color-paragraph-light);
+}
+.home .ad-card.special-card .stamp-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: calc(var(--space-sm) - 4px);
+  width: 100px;
+  height: 115px;
+
+  font-size: var(--font-size-rg);
+  background: var(--color-bg-secondary);
+  border: solid 2px var(--color-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+.home .ad-card.special-card .stamp-block .material-symbols-outlined {
+  color: var(--color-gold-border);
+  font-size: 36px;
+}
+
+/* ANIMATION */
+.home .ad-card {
+  transition-property: scale;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+.home .ad-card:hover {
+  scale: 1.03;
+}
+
+.home .ad-card button.ad-apply-now-btn {
+  transition-property: background;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+.home .ad-card button.ad-apply-now-btn:hover {
+  background: var(--btn-gold-gradient);
+}
+
+.home .ad-card.special-card .stamp-block {
+  transition-property: background, color, scale, border-color;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+.home .ad-card.special-card .stamp-block:hover {
+  scale: 1.15;
+  color: var(--color-primary);
+  background: var(--color-gold-border);
+  border-color: var(--color-gold-border);
+}
+.home .ad-card.special-card .stamp-block .material-symbols-outlined {
+  transition-property: background, color, scale;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+.home .ad-card.special-card .stamp-block:hover .material-symbols-outlined {
+  color: var(--color-primary);
+}

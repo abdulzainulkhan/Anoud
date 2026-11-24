@@ -1,0 +1,77 @@
+:root {
+  --font-family-sans: "Google Sans", sans-serif;
+  --font-size-sm: 9px;
+  --font-size-rg: 13px;
+  --font-size-md: 15px;
+  --font-size-lg: 18px;
+  --font-size-xl: 21px;
+  --font-size-cover-heading: 48px;
+  --font-size-footer-leading: 36px;
+  --font-weight-lt: 200;
+  --font-weight-rg: 400;
+  --font-weight-sb: 500;
+  --font-weight-b: 600;
+  --font-weight-boldest: 900;
+
+  --color-font-dark: #000;
+  --color-heading-light: #f7fafd;
+  --color-paragraph-light: #e5eaf2;
+  --color-bg-primary: #061836;
+  --color-bg-secondary: #0a224f;
+  --color-primary: #002b8e;
+  --color-secondary: #0f2761;
+
+  --glass-backgronud-color: #cedcef29;
+  --glass-backgronud-light: #e2ebf73d;
+  --glass-backgronud-heavy: #ffffff77;
+  --glass-backgronud-dark: #08193a73;
+  --glass-blur-sm: blur(5px);
+  --glass-blur-md: blur(18px);
+  --glass-blur-lg: blur(26px);
+  --glass-blur-xl: blur(36px);
+  --glow-white: radial-gradient(circle, #ffffff94 13%, transparent 65%);
+  --border-glow-white: inset 0 0 14px 2px #ffffffd1, 0px 0px 10px -3px #fff;
+  --border-color-white: #ffffffbd;
+  --background-glow-white: rgb(255 255 255 / 15%);
+  --background-header: linear-gradient(
+    270deg,
+    #d9d9d9 0%,
+    #edf2f8 50%,
+    #b8b8b8 100%
+  );
+  --btn-gold-gradient: linear-gradient(
+    115deg,
+    #d1a747 0%,
+    #f4df96 50%,
+    #d1a747 100%
+  );
+  --color-gold-border: #f1cb63; /*#f1d47b;*/
+  --back-shadow: 0px 8px 10px 2px rgba(0, 0, 0, 0.2);
+  --flag-shadow: 0px 0px 4px 2px #00000059;
+  --text-shadow-dark: 2px 2px 8px black;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  --space-sm: 8px;
+  --space-md: 17px;
+  --space-lg: 23px;
+  --space-xl: 32px;
+  --space-compnt-lg: 40px;
+  --space-compnt-xl: 60px;
+
+  /* ANIMATION TOKKEN */
+  --golden-glow-box:
+    0 0 13px 4px var(--color-gold-border),
+    inset 0 0 20px 4px var(--color-gold-border);
+
+  --initial-gold-gradient: linear-gradient(
+    115deg,
+    #d1a84700 0%,
+    #f4e09600 50%,
+    #d1a84700 100%
+  );
+}

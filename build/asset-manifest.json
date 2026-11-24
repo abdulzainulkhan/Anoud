@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7c12bddc.css",
+    "main.js": "/static/js/main.097201a1.js",
+    "static/media/Anoud Travel Globe Logo.png": "/static/media/Anoud Travel Globe Logo.a1740fd0b35b963080c5.png",
+    "static/media/Anoud Tour and Travel Logo.png": "/static/media/Anoud Tour and Travel Logo.caf4ce388b7556883979.png",
+    "index.html": "/index.html",
+    "main.7c12bddc.css.map": "/static/css/main.7c12bddc.css.map",
+    "main.097201a1.js.map": "/static/js/main.097201a1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c12bddc.css",
+    "static/js/main.097201a1.js"
+  ]
+}

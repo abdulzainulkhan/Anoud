@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+  .home header.cover-block {
+    min-height: 760px;
+    height: auto;
+    padding: 112px 20px 36px;
+    display: flex;
+    flex-direction: column;
+    background-position: center top;
+    background-size: auto 760px;
+  }
+
+  .home header.cover-block .main-text {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  .home header.cover-block .main-text .long-bubble-text {
+    width: fit-content;
+    max-width: 100%;
+    padding: 7px 12px;
+    font-size: clamp(13px, 3.8vw, 18px);
+  }
+
+  .home header.cover-block .main-text .large-text {
+    width: auto;
+    font-size: clamp(36px, 11vw, 48px);
+    line-height: 1.05;
+  }
+
+  .home header.cover-block .main-text .small-text {
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .home header.cover-block .cover-buttons {
+    padding: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .home header.cover-block .cover-buttons button {
+    flex: 1 1 155px;
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+
+  .home .cover-block .picture-cards {
+    order: 3;
+    width: 100%;
+    height: 235px;
+    margin-top: 40px;
+  }
+
+  .home .cover-block .card img {
+    width: 148px;
+  }
+
+  #card-1 {
+    bottom: 55px;
+    right: 42%;
+  }
+  #card-2 {
+    bottom: 25px;
+    right: 2%;
+  }
+  #card-3 {
+    bottom: 2px;
+    right: 25%;
+  }
+
+  .home .cover-block .placard,
+  #placard-1,
+  #placard-2,
+  #placard-3 {
+    min-width: 0;
+    width: 235px;
+    z-index: 2;
+  }
+  #placard-1 {
+    top: 11pc;
+    left: -13px;
+  }
+  #placard-2 {
+    top: 6pc;
+    left: 1pc;
+  }
+  #placard-3 {
+    top: -1pc;
+    right: -2pc;
+  }
+}

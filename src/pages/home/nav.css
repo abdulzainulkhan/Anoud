@@ -1,0 +1,73 @@
+.home nav {
+  position: fixed;
+  width: 90vw;
+  height: 80px;
+  translate: -50%;
+  top: 30px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--space-sm) var(--space-md);
+
+  background-color: var(--glass-backgronud-heavy);
+  backdrop-filter: var(--glass-blur-lg);
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--back-shadow);
+  z-index: 2;
+}
+
+.home nav .logo {
+  background: var(--glow-white);
+}
+.home nav .logo img {
+  height: 79px;
+}
+.home nav .option-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--space-md);
+  gap: 0 var(--space-compnt-lg);
+
+  font-family: var(--font-family-sans);
+  font-weight: var(--font-weight-b);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+}
+.home nav .button-container {
+  flex: 1;
+  text-align: end;
+}
+.home nav button.golden-button {
+  padding: var(--space-sm) var(--space-md);
+
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--back-shadow);
+  background: var(--btn-gold-gradient);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-sb);
+}
+
+/* ANIMATOINS */
+.home nav .option-list li {
+  transition-property: translate;
+  transition-timing-function: ease-out;
+  transition-duration: 100ms;
+}
+.home nav .option-list li:hover {
+  translate: 0 -3px;
+}
+
+.home nav button.golden-button {
+  transition-property: box-shadow, color, background;
+  transition-timing-function: ease-out;
+  transition-duration: 300ms;
+}
+.home nav button.golden-button:hover {
+  box-shadow: var(--golden-glow-box);
+  background: transparent;
+  color: var(--color-paragraph-light);
+}
