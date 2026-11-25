@@ -20,7 +20,7 @@ export default function Footer() {
                 call
               </span>
               <span className="text">
-                <a href="https://wa.me/9012970670">9012970670</a>
+                <a href="https://wa.me/9220702926">9220702926</a>
               </span>
             </li>
 
@@ -28,14 +28,20 @@ export default function Footer() {
               <span className="footer-icon material-symbols-outlined">
                 call
               </span>
-              <span className="text">8595106080</span>
+              <span className="text">
+                <a href="https://wa.me/9205895056">9205895056</a>
+              </span>
             </li>
 
             <li>
               <span className="footer-icon material-symbols-outlined">
                 mail
               </span>
-              <span className="text">zainulavdeenkhan@gmail.com</span>
+              <span className="text">
+                <a href="mailto:anoudinternationalcareers@gmail.com">
+                  anoudinternationalcareers@gmail.com
+                </a>
+              </span>
             </li>
           </ul>
         </div>

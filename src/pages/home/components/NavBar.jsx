@@ -6,10 +6,6 @@ export default function NavBar() {
 
   const openLink = () => {
     setIsMenuOpen(false);
-    window.open(
-      "https://www.researchgate.net/publication/343627020/figure/fig1/AS:923927526244352@1597292896117/Meme-circulated-on-WhatsApp-Personal-communication-Moscow-2020.jpg",
-      "_blank",
-    );
   };
 
   return (

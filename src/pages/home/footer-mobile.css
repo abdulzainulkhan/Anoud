@@ -18,16 +18,16 @@
     text-align: right;
   }
 
-  footer .bottom {
+  .home footer .bottom {
     padding: 0;
     margin-top: 22px;
   }
 
-  footer .bottom .contact .heading {
+  .home footer .bottom .contact .heading {
     margin-bottom: 10px;
   }
 
-  footer .bottom .contact li {
+  .home footer .bottom .contact li {
     overflow-wrap: anywhere;
   }
 }

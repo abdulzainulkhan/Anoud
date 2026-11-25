@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import countries from "../../../data/countries.json";
+import "../FlagCode.css";
 
 export default function FlagCode({ flag, setFlag }) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -34,14 +35,32 @@ export default function FlagCode({ flag, setFlag }) {
   const handleSuggestionAccept = (code) => {
     const country = countries.find((c) => c.alpha2.toLowerCase() === code);
 
-    setFlag({ ...country, code });
+    setFlag({ ...country, code, copyIconState: "content_copy" });
     setSearchQuery("");
     setSuggestions([]);
+  };
+
+  const handleCopytoClipboard = async () => {
+    if (flag.copyIconState !== "content_copy") return;
+    try {
+      await navigator.clipboard.writeText(flag.code);
+      setFlag((prev) => ({ ...prev, copyIconState: "check" }));
+    } catch (err) {
+      setFlag((prev) => ({ ...prev, copyIconState: "error" }));
+    } finally {
+      setTimeout(
+        () => setFlag((prev) => ({ ...prev, copyIconState: "content_copy" })),
+        1000,
+      );
+    }
   };
 
   return (
     <main className="flag-code">
       <section className="query-block">
+        <header>
+          <h3>Search a Country Details</h3>
+        </header>
         <span className="material-symbols-outlined">search</span>
         <input
           type="text"
@@ -70,6 +89,14 @@ export default function FlagCode({ flag, setFlag }) {
 
       {flag.code && (
         <section className="country-details-block">
+          <div
+            className="close-btn"
+            title="reset this country selected"
+            onClick={() => setFlag({ code: false })}
+          >
+            <span className="material-symbols-outlined">close</span>
+          </div>
+
           <div className="country-details">
             <div className="flag">
               <img src={`https://flagcdn.com/w80/${flag.code}.png`} />
@@ -79,9 +106,34 @@ export default function FlagCode({ flag, setFlag }) {
               <span className="value">{flag.name}</span>
             </div>
 
+            <div className="field code">
+              <label>Alpha Code</label>
+              <span className="value">
+                <div className="code">{flag.code}</div>
+                <div
+                  className={`copy-button${flag.copyIconState === "check" ? " copy-done" : flag.copyIconState === "error" ? " copy-error" : ""}`}
+                  onClick={handleCopytoClipboard}
+                >
+                  <span className="material-symbols-outlined">
+                    {flag.copyIconState}
+                  </span>
+                </div>
+              </span>
+            </div>
+
             <div className="field">
               <label>Official Name</label>
               <span className="value">{flag.officialName}</span>
+            </div>
+
+            <div className="field">
+              <label>Calling Code</label>
+              <span className="value">{flag.callingCode}</span>
+            </div>
+
+            <div className="field">
+              <label>Currency</label>
+              <span className="value">{flag.currency}</span>
             </div>
 
             <div className="field">

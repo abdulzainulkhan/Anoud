@@ -1,0 +1,107 @@
+.card-entry {
+  margin-top: var(--space-lg);
+}
+
+.card-entry header {
+  font-size: var(--font-size-xl);
+}
+.card-entry header .sub-text {
+  font-size: var(--font-size-rg);
+}
+
+.card-entry .data-field-container {
+  margin-top: var(--space-lg);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: var(--space-md) var(--space-compnt-xl);
+}
+
+.card-entry .data-field-container .field {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-sm) 0;
+  text-transform: uppercase;
+}
+
+.card-entry .data-field-container .field.image-name {
+  grid-column: 2 / 4;
+}
+
+.card-entry .data-field-container .field input,
+.card-entry .data-field-container .field textarea {
+  padding: var(--space-sm);
+
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-rg);
+  font-weight: var(--font-weight-sb);
+  outline: none;
+}
+
+.card-entry .data-field-container .field .link-preview {
+  width: 100%;
+  font-size: calc(var(--font-size-sm) + 3px);
+  font-weight: var(--font-weight-lt);
+  text-transform: lowercase;
+  overflow-x: auto;
+}
+.card-entry .data-field-container .field .link-preview a {
+  text-decoration: none;
+  color: var(--color-paragraph-light);
+}
+
+.card-entry .button-container {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.card-entry button.copy-btn,
+.card-entry button.reset-btn {
+  width: 160px;
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+
+  background: var(--btn-gold-gradient);
+  border: solid 2px var(--color-gold-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-rg);
+  font-weight: var(--font-weight-boldest);
+  transition: width ease-out 100ms;
+}
+.card-entry button.copy-btn:hover,
+.card-entry button.reset-btn:hover {
+  width: 170px;
+}
+
+.card-entry .home {
+  color: var(--color-font-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-lg);
+}
+.card-entry .heading h4 {
+  color: var(--color-bg-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-boldest);
+  text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .card-entry .data-field-container {
+    grid-template-columns: 100%;
+  }
+
+  .card-entry .data-field-container .field.image-name {
+    grid-column: auto;
+  }
+}

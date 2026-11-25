@@ -12,3 +12,29 @@ button {
 ul {
   list-style-type: none;
 }
+
+/* Keep scrollbars easy to grab while taking up less visual space. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7a8594 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #7a8594;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #596575;
+}
